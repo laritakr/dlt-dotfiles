@@ -1,0 +1,11 @@
+#!/bin/sh
+
+brew_install_or_upgrade 'exercism'
+brew_install_or_upgrade 'go'
+brew_install_or_upgrade 'graphviz'
+brew_install_or_upgrade 'shellcheck'
+brew_install_or_upgrade 'wrk'
+
+fancy_echo "Cleaning up old Homebrew formulae ..."
+brew cleanup
+brew cask cleanup
