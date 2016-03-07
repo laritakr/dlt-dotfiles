@@ -1,11 +1,28 @@
 #!/bin/sh
 
+fancy_echo 'Configuring utility packages ...'
 brew_install_or_upgrade 'exercism'
 brew_install_or_upgrade 'go'
 brew_install_or_upgrade 'graphviz'
 brew_install_or_upgrade 'shellcheck'
 brew_install_or_upgrade 'wrk'
 
-fancy_echo "Cleaning up old Homebrew formulae ..."
+fancy_echo 'Development environment setup ...'
+export GIT_DIR
+GIT_DIR="/Users/$(whoami)/git/"
+mkdir -p GIT_DIR
+
+fancy_echo 'Configuring dependencies for CurateND ...'
+CURATEND_DIR="${GIT_DIR}curate_nd/"
+CURATEND_RUBY_VERSION_FILE="${CURATEND_DIR}.ruby-version"
+
+if [ -f "$CURATEND_RUBY_VERSION_FILE" ]; then
+  rbenv install -s "$(cat "$CURATEND_RUBY_VERSION_FILE")"
+else
+  fancy_echo 'Cannot find .ruby_version file for CurateND'
+fi
+
+fancy_echo 'Cleaning up old Homebrew formulae ...'
+mkdir -p /Library/Caches/Homebrew/Casks
 brew cleanup
 brew cask cleanup
