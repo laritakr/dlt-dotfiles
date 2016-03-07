@@ -1,1 +1,4 @@
 bindkey '\e.' insert-last-word
+
+export PATH="$HOME/.bin:$PATH"
+eval "$(rbenv init - --no-rehash)"
