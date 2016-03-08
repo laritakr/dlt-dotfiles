@@ -5,6 +5,7 @@ brew_install_or_upgrade 'exercism'
 brew_install_or_upgrade 'go'
 brew_install_or_upgrade 'graphviz'
 brew_install_or_upgrade 'shellcheck'
+brew_install_or_upgrade 'tree'
 brew_install_or_upgrade 'wrk'
 
 fancy_echo 'Development environment setup ...'
