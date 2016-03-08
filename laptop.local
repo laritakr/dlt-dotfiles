@@ -14,12 +14,15 @@ mkdir -p "$GIT_DIR"
 
 fancy_echo 'Configuring dependencies for CurateND ...'
 CURATEND_DIR="${GIT_DIR}curate_nd/"
-CURATEND_RUBY_VERSION_FILE="${CURATEND_DIR}.ruby-version"
-
-if [ -f "$CURATEND_RUBY_VERSION_FILE" ]; then
-  rbenv install -s "$(cat "$CURATEND_RUBY_VERSION_FILE")"
+if [ -d "$CURATEND_DIR" ]; then
+  CURATEND_RUBY_VERSION_FILE="${CURATEND_DIR}.ruby-version"
+  if [ -f "$CURATEND_RUBY_VERSION_FILE" ]; then
+    rbenv install -s "$(cat "$CURATEND_RUBY_VERSION_FILE")"
+  else
+    fancy_echo 'Cannot find .ruby_version file for CurateND'
+  fi
 else
-  fancy_echo 'Cannot find .ruby_version file for CurateND'
+  fancy_echo "Please clone the CurateND repo into ${CURATEND_DIR}"
 fi
 
 fancy_echo 'Configuring Java ...'
