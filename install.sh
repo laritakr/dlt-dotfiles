@@ -1,11 +1,10 @@
 #!/bin/sh
 
 DOTFILES_DIR="$( cd "$( dirname "$0" )" && pwd )"
-HOME_DIR="/Users/$(whoami)"
 
-if [ -d "$HOME_DIR" ]; then
+if [ -d "$HOME" ]; then
   echo 'Creating symlinks for local dotfiles ...'
-  cd "$HOME_DIR"
+  cd "$HOME"
   ln -nsf "$DOTFILES_DIR/aliases.local" .aliases.local
   ln -nsf "$DOTFILES_DIR/bundle" .bundle
   ln -nsf "$DOTFILES_DIR/gitconfig.local" .gitconfig.local

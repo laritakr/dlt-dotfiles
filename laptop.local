@@ -9,7 +9,7 @@ brew_install_or_upgrade 'tree'
 brew_install_or_upgrade 'wrk'
 
 fancy_echo 'Development environment setup ...'
-GIT_DIR="/Users/$(whoami)/git/"
+GIT_DIR="$HOME/git/"
 mkdir -p "$GIT_DIR"
 
 fancy_echo 'Configuring dependencies for CurateND ...'
