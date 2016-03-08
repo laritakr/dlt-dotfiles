@@ -1,4 +1,29 @@
 bindkey '\e.' insert-last-word
 
+# Interface normalization for legacy rails apps
+function rr {
+  if [ -f script/server ]; then
+    script/server $@
+  else
+   rails server $@
+  fi
+}
+
+function console {
+  if [ -f script/console ]; then
+    script/console $@
+  else
+    rails console $@
+  fi
+}
+
+function rg {
+  if [ -e script/generate ]; then
+    script/generate $@
+  else
+    rails generate $@
+  fi
+}
+
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
