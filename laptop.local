@@ -25,7 +25,7 @@ fancy_echo 'Configuring Java ...'
 brew cask install java
 
 fancy_echo 'Configuring MySQL ...'
-brew_install_or_upgrade 'mysql'
+brew_install_or_upgrade 'mysql56' # gem mysql2 '0.3.13' supports MySQL ~> 5.6
 
 fancy_echo 'Cleaning up old Homebrew formulae ...'
 mkdir -p /Library/Caches/Homebrew/Casks
