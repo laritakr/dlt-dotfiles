@@ -32,3 +32,6 @@ fancy_echo 'Cleaning up old Homebrew formulae ...'
 mkdir -p /Library/Caches/Homebrew/Casks
 brew cleanup
 brew cask cleanup
+
+fancy_echo 'Restoring stashed changes to Cellar ...'
+cd /usr/local && git stash pop
