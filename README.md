@@ -13,11 +13,12 @@ but there are also some project-specific elements sprinkled in.
 
 ### Local Customization
 1. [Fork this repository][5] to your github account.
-2. Clone your fork of this repository onto your computer. (I put repos in `~/git`)
-3. Run `install.sh` to symlink the configuration files in this repo to `~/`
-4. Run `cd ~/ && sh mac 2>&1 | tee ~/laptop.log` to apply the changes.
+2. Clone your fork of this repository onto your computer into `~/git/`.
+3. Run `install.sh` to symlink the configuration files in this repo to `~/`.
+4. The local installation script expects the [CurateND repo][6] to be present in `~/git/`.
+5. Run `sh ~/mac 2>&1 | tee ~/laptop.log` to apply the changes.
 
-Make and commit changes as needed to your fork. Submit [pull requests][6] with
+Make and commit changes as needed to your fork. Submit [pull requests][7] with
 customisations you think could benefit others.
 
 Whenever you make changes to `laptop.local` use the `laptop` alias to re-run the
@@ -46,4 +47,5 @@ Or, if you don't want/need launchctl, you can just run:
 [3]: https://github.com/thoughtbot/laptop#install
 [4]: https://github.com/thoughtbot/dotfiles#install
 [5]: https://help.github.com/articles/fork-a-repo/
-[6]: https://help.github.com/articles/using-pull-requests/
+[6]: https://github.com/ndlib/curate_nd
+[7]: https://help.github.com/articles/using-pull-requests/
