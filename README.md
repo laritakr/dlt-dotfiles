@@ -7,7 +7,7 @@ but there are also some project-specific elements sprinkled in.
 ## Installation
 
 ### Baseline Configuration
-1. Follow the instructions to [install thoughtbot/laptop][3]
+1. Follow the instructions to [install thoughtbot/laptop][3]. (Leave `mac` in `~/`)
 2. `git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles`
 3. Follow the rest of the instructions for [installing thoughtbot/dotfiles][4]
 
@@ -15,9 +15,13 @@ but there are also some project-specific elements sprinkled in.
 1. [Fork this repository][5] to your github account.
 2. Clone your fork of this repository onto your computer. (I put repos in `~/git`)
 3. Run `install.sh` to symlink the configuration files in this repo to `~/`
+4. Run `cd ~/ && sh mac 2>&1 | tee ~/laptop.log` to apply the changes.
 
 Make and commit changes as needed to your fork. Submit [pull requests][6] with
 customisations you think could benefit others.
+
+Whenever you make changes to `laptop.local` use the `laptop` alias to re-run the
+`mac` script.
 
 ## MySQL
 By default the setup script does not configure MySQL securely. To add a root
