@@ -1,6 +1,3 @@
-[user]
-  name  = Dan Brubaker Horst
-  email = dan.brubaker.horst@gmail.com
 [alias]
   ba = branch -a
   branch-current = rev-parse --symbolic-full-name --abbrev-ref HEAD
@@ -51,3 +48,5 @@
   clean = git lfs clean %f
   smudge = git lfs smudge %f
   required = true
+[include]
+  path = ~/.gitconfig.name
