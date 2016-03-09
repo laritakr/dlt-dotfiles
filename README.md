@@ -5,6 +5,7 @@ This repository is a companion to [thoughtbot/laptop][1] and
 but there are also some project-specific elements sprinkled in.
 
 ## Installation
+> For detailed instructions see `Runbook.md`
 
 ### Baseline Configuration
 1. Follow the instructions to [install thoughtbot/laptop][3]. (Leave `mac` in `~/`)
