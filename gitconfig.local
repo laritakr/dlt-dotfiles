@@ -49,4 +49,4 @@
   smudge = git lfs smudge %f
   required = true
 [include]
-  path = ~/.gitconfig.name
+  path = ~/.gitconfig.user
