@@ -52,5 +52,10 @@ mkdir -p /Library/Caches/Homebrew/Casks
 brew cleanup
 brew cask cleanup
 
-fancy_echo 'Restoring stashed changes to Cellar ...'
-cd /usr/local && git stash pop
+fancy_echo 'Checking for stashed changes in Cellar ...'
+if [ "$(cd /usr/local && git stash list)" ]; then
+  fancy_echo 'Restoring stashed changes to Cellar ...'
+  cd /usr/local && git stash pop
+else
+  fancy_echo 'No changes are stashed'
+fi
