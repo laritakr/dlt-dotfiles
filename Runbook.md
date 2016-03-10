@@ -5,13 +5,14 @@ _This guide is for provisioning newly formatted macs to work on DLT projects._
 ## Getting Started
 > You will need an Apple ID. If you do not already have one please create it after the initial setup process of the new mac.
 
-- Skip logging in with your Apple ID during the initial setup process. We will be activating specific parts of iCloud manually.
+- Skip logging in with your Apple ID during the initial setup process. You can activate specific parts of iCloud manually at a later time.
 - Go to `System Preferences > iCloud` and sign in or create an Apple ID
 - Uncheck “User iCloud for mail, contacts, calendars, reminders, notes, and Safari” and click Next.
 - Take your mac to Mike so he can grant your account administrative privileges.
 - Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) (this will take a while). While you wait:
   - Install [iTerm2](https://www.iterm2.com/).
   - Install [Chrome](https://www.google.com/chrome/browser/desktop/).
+  - Install [ESC Menu Extra](http://esc.nd.edu/mac/menuextra.html)
   - [Set up your github account](#github-account-setup).
 - Once Xcode has finished installing open the Xcode application and accept the license agreement.
 - Open iTerm and run `xcode-select --install`. Accept the license agreement.
@@ -26,8 +27,22 @@ _This guide is for provisioning newly formatted macs to work on DLT projects._
 ```console
 ssh-keygen
 ```
+
 - Use the default filename (`~/.ssh/id_rsa`)
-- WIP
+- Give it a passphrase for better security. ([Infosec](http://oithelp.nd.edu/information-security/) recommends [Password Safe](https://pwsafe.org/) for storing credentials.)
+- Copy your _public_ ssh key to the clipboard:
+
+```console
+cat ~/.ssh/id_rsa.pub | pbcopy
+```
+
+- Go to the “SSH Keys” page in your github account: https://github.com/settings/ssh
+- Click the “New SSH key” button.
+  - Paste in your public key into the “Key” field.
+  - Type your computer name into the “Title” field (it should be the last part of the public key and look something like `LIB-1989`).
+  - Submit the form by clicking on “Add SSH key”
+
+> If OS X prompts you to store the SSH passphrase in the Keychain accept the offer.
 
 ## Core Setup
 - Install [thoughtbot/laptop](https://github.com/thoughtbot/laptop) in `~/`:
