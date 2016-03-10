@@ -11,7 +11,7 @@ brew "wrk"
 
 # Loading older version of MySQL gem for CurateND compatibility
 # gem mysql2 '0.3.13' supports MySQL ~> 5.6
-brew 'mysql56'
+brew "homebrew/versions/mysql56"
 EOF
 
 fancy_echo 'Development environment setup ...'
