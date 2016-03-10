@@ -42,8 +42,6 @@ cat ~/.ssh/id_rsa.pub | pbcopy
   - Type your computer name into the “Title” field (it should be the last part of the public key and look something like `LIB-1989`).
   - Submit the form by clicking on “Add SSH key”
 
-> If OS X prompts you to store the SSH passphrase in the Keychain accept the offer.
-
 ## Core Setup
 - Install [thoughtbot/laptop](https://github.com/thoughtbot/laptop) in `~/`:
 
@@ -66,15 +64,19 @@ env RCRC=$HOME/dotfiles/rcrc rcup
 - `dlt-dotfiles/laptop.local` will install additional software packages if the [CurateND codebase](https://github.com/ndlib/curate_nd) is present on your computer:
 
 ```console
+mkdir ~/git
 git clone git@github.com:ndlib/curate_nd.git ~/git/curate_nd
 ```
+
+- If this is the first time you are checking out a project over SSH you will have two prompts:
+	- The shell will prompt you to accept the `authenticity of host github.com`; do so.
+	- A window will pop up prompting you for your SSH passphrase. Check the “store passphrase in keychain” box before submission.
 
 - [Fork](https://help.github.com/articles/fork-a-repo/) the [dlt-dotfiles repo](https://github.com/ndlib/dlt-dotfiles/) to your github account.
 - Install _your fork_ of [DLT Dotfiles](https://github.com/ndlib/dlt-dotfiles/):
 
 ```console
-mkdir ~/git
-git clone https://github.com/YOUR_GITHUB_USERNAME/dlt-dotfiles/ ~/git/dlt-dotfiles
+git clone git@:github.com:YOUR_GITHUB_USERNAME/dlt-dotfiles.git ~/git/dlt-dotfiles
 ~/git/dlt-dotfiles/install.sh
 ```
 
