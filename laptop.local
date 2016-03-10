@@ -1,12 +1,18 @@
 #!/bin/sh
 
 fancy_echo 'Configuring utility packages ...'
-brew_install_or_upgrade 'exercism'
-brew_install_or_upgrade 'go'
-brew_install_or_upgrade 'graphviz'
-brew_install_or_upgrade 'shellcheck'
-brew_install_or_upgrade 'tree'
-brew_install_or_upgrade 'wrk'
+brew bundle --file=- <<EOF
+brew "exercism"
+brew "go"
+brew "graphviz"
+brew "shellcheck"
+brew "tree"
+brew "wrk"
+
+# Loading older version of MySQL gem for CurateND compatibility
+# gem mysql2 '0.3.13' supports MySQL ~> 5.6
+brew 'mysql56'
+EOF
 
 fancy_echo 'Development environment setup ...'
 GIT_DIR="$HOME/git/"
@@ -27,9 +33,6 @@ fi
 
 fancy_echo 'Configuring Java ...'
 brew cask install java
-
-fancy_echo 'Configuring MySQL ...'
-brew_install_or_upgrade 'mysql56' # gem mysql2 '0.3.13' supports MySQL ~> 5.6
 
 fancy_echo 'Configuring ruby for Sipity ...'
 sipity_dir="${GIT_DIR}sipity/"
