@@ -5,10 +5,10 @@ This repository is a companion to [thoughtbot/laptop][1] and
 but there are also some project-specific elements sprinkled in.
 
 ## Installation
-> For detailed instructions see `Runbook.md`
+> For detailed, step-by-step, instructions see `Runbook.md`
 
 ### Baseline Configuration
-1. Follow the instructions to [install thoughtbot/laptop][3]. (Leave `mac` in `~/`)
+1. Follow the instructions for [installing thoughtbot/laptop][3]. (Leave `mac` in `~/`)
 2. `git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles`
 3. Follow the rest of the instructions for [installing thoughtbot/dotfiles][4]
 
@@ -16,8 +16,7 @@ but there are also some project-specific elements sprinkled in.
 1. [Fork this repository][5] to your github account.
 2. Clone your fork of this repository onto your computer into `~/git/`.
 3. Run `install.sh` to symlink the configuration files in this repo to `~/`.
-4. The local installation script expects the [CurateND repo][6] to be present in `~/git/`.
-5. Run `sh ~/mac 2>&1 | tee ~/laptop.log` to apply the changes.
+3. Restart your Terminal app and run `laptop` to apply the changes.
 
 Make and commit changes as needed to your fork. Submit [pull requests][7] with
 customisations you think could benefit others.
@@ -33,14 +32,25 @@ password use:
 To connect run:
 `mysql -uroot`
 
-To have launchd start mysql at login:
+To have launchd start MySQL at login:
 `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
 
-Then to load mysql now:
+Then to load MySQL now:
 `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
 
-Or, if you don't want/need launchctl, you can just run:
-`mysql.server start`
+You can also manually start and stop the MySQL service:
+
+```console
+mysql.server start
+mysql.server stop
+```
+
+These service commands have aliases for your convenience:
+
+```console
+mysql_start
+mysql_stop
+```
 
 
 [1]: https://github.com/thoughtbot/laptop

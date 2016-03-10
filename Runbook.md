@@ -88,4 +88,6 @@ git clone git@:github.com:YOUR_GITHUB_USERNAME/dlt-dotfiles.git ~/git/dlt-dotfil
 laptop
 ```
 
+- You may be prompted for your administrative password the first time you run the script. Enter it if needed.
+
 :sparkles:You’re Done!:sparkles:
