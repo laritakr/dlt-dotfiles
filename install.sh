@@ -4,11 +4,10 @@ if [ -d "$HOME" ]; then
   dotfiles_dir="$( cd "$( dirname "$0" )" && pwd )"
 
   echo 'Creating symlinks for local dotfiles ...'
-  cd "$HOME"
-  ln -nsf "$dotfiles_dir/aliases.local" .aliases.local
-  ln -nsf "$dotfiles_dir/gitconfig.local" .gitconfig.local
-  ln -nsf "$dotfiles_dir/laptop.local" .laptop.local
-  ln -nsf "$dotfiles_dir/zshrc.local" .zshrc.local
+  ln -nsf "$dotfiles_dir/aliases.local" "$HOME/.aliases.local"
+  ln -nsf "$dotfiles_dir/gitconfig.local" "$HOME/.gitconfig.local"
+  ln -nsf "$dotfiles_dir/laptop.local" "$HOME/.laptop.local"
+  ln -nsf "$dotfiles_dir/zshrc.local" "$HOME/.zshrc.local"
 
   if [ -d "$HOME/.bundle" ]; then
     echo "$HOME/.bundle directory exists"
@@ -16,7 +15,7 @@ if [ -d "$HOME" ]; then
     echo "Creating $HOME/.bundle directory"
     mkdir "$HOME/.bundle"
   fi
-  ln -nsf "$dotfiles_dir/bundle/config" .bundle/config
+  ln -nsf "$dotfiles_dir/bundle/config" "$HOME/.bundle/config"
 
   # Example ~/.gitconfig.name
   #
