@@ -6,6 +6,7 @@
   forget = update-index --assume-unchanged
   lg = log --graph --pretty=format:'%C(red)%h%Creset — %C(yellow)%s%Creset %d%n          %an, %C(green)(%ar)%Creset'
   number-of-commits-since-master = "! sh -c 'git log master..`git branch-current` --oneline | wc -l | tr -d \" \"'"
+  pf = push --force-with-lease
   remember = update-index --no-assume-unchanged
   rs = reset --hard HEAD
   squash = "! sh -c 'git rebase --interactive HEAD~`git number-of-commits-since-master`'"
