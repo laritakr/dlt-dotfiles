@@ -69,14 +69,16 @@ git clone git@github.com:ndlib/curate_nd.git ~/git/curate_nd
 ```
 
 - If this is the first time you are checking out a project over SSH you will have two prompts:
-	- The shell will prompt you to accept the `authenticity of host github.com`; do so.
-	- A window will pop up prompting you for your SSH passphrase. Check the “store passphrase in keychain” box before submission.
+  - The shell will prompt you to accept the `authenticity of host github.com`; do so.
+  - A window will pop up prompting you for your SSH passphrase. Check the “store passphrase in keychain” box before submission.
 
 - [Fork](https://help.github.com/articles/fork-a-repo/) the [dlt-dotfiles repo](https://github.com/ndlib/dlt-dotfiles/) to your github account.
 - Install _your fork_ of [DLT Dotfiles](https://github.com/ndlib/dlt-dotfiles/):
 
+> NOTE: replace YOUR_GITHUB_USERNAME in the following command with your github username
+
 ```console
-git clone git@:github.com:YOUR_GITHUB_USERNAME/dlt-dotfiles.git ~/git/dlt-dotfiles
+git clone git@github.com:YOUR_GITHUB_USERNAME/dlt-dotfiles.git ~/git/dlt-dotfiles
 ~/git/dlt-dotfiles/install.sh
 ```
 
