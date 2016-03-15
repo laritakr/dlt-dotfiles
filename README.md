@@ -5,20 +5,20 @@ This repository is a companion to [thoughtbot/laptop][1] and
 but there are also some project-specific elements sprinkled in.
 
 ## Installation
-> For detailed, step-by-step, instructions see `Runbook.md`
+> For detailed, step-by-step, instructions see [Runbook.md][3]
 
 ### Baseline Configuration
-1. Follow the instructions for [installing thoughtbot/laptop][3]. (Leave `mac` in `~/`)
+1. Follow the instructions for [installing thoughtbot/laptop][4]. (Leave `mac` in `~/`)
 2. `git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles`
-3. Follow the rest of the instructions for [installing thoughtbot/dotfiles][4]
+3. Follow the rest of the instructions for [installing thoughtbot/dotfiles][5]
 
 ### Local Customization
-1. [Fork this repository][5] to your github account.
+1. [Fork this repository][6] to your github account.
 2. Clone your fork of this repository onto your computer into `~/git/`.
 3. Run `install.sh` to symlink the configuration files in this repo to `~/`.
 3. Restart your Terminal app and run `laptop` to apply the changes.
 
-Make and commit changes as needed to your fork. Submit [pull requests][7] with
+Make and commit changes as needed to your fork. Submit [pull requests][8] with
 customisations you think could benefit others.
 
 Whenever you make changes to `laptop.local` use the `laptop` alias to re-run the
@@ -55,8 +55,9 @@ mysql_stop
 
 [1]: https://github.com/thoughtbot/laptop
 [2]: https://github.com/thoughtbot/dotfiles
-[3]: https://github.com/thoughtbot/laptop#install
-[4]: https://github.com/thoughtbot/dotfiles#install
-[5]: https://help.github.com/articles/fork-a-repo/
-[6]: https://github.com/ndlib/curate_nd
-[7]: https://help.github.com/articles/using-pull-requests/
+[3]: ./Runbook.md
+[4]: https://github.com/thoughtbot/laptop#install
+[5]: https://github.com/thoughtbot/dotfiles#install
+[6]: https://help.github.com/articles/fork-a-repo/
+[7]: https://github.com/ndlib/curate_nd
+[8]: https://help.github.com/articles/using-pull-requests/
