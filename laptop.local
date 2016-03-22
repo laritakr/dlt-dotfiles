@@ -6,6 +6,7 @@ brew "exercism"
 brew "go"
 brew "graphviz", args: ["with-app"]
 brew "shellcheck"
+brew "terminal-notifier"
 brew "tree"
 brew "wrk"
 
