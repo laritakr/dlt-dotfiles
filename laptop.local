@@ -2,12 +2,14 @@
 
 fancy_echo 'Configuring utility packages ...'
 brew bundle --file=- <<EOF
+brew "dos2unix"
 brew "exercism"
 brew "go"
 brew "graphviz", args: ["with-app"]
 brew "shellcheck"
 brew "terminal-notifier"
 brew "tree"
+brew "wget"
 brew "wrk"
 
 # Loading older version of MySQL gem for CurateND compatibility
