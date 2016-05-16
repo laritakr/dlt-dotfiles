@@ -33,6 +33,10 @@ else
   fancy_echo "Please clone the CurateND repo into ${curatend_dir}"
 fi
 
+fancy_echo 'Go development environment setup ...'
+GOPATH="$HOME/gocode/"
+mkdir -p "$GOPATH"
+
 fancy_echo 'Configuring Java ...'
 brew cask install java
 
