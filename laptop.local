@@ -4,6 +4,7 @@ fancy_echo 'Configuring utility packages ...'
 brew bundle --file=- <<EOF
 brew "exercism"
 brew "go"
+brew "godep"
 brew "graphviz", args: ["with-app"]
 brew "shellcheck"
 brew "terminal-notifier"
