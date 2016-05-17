@@ -8,6 +8,7 @@ brew "go"
 brew "godep"
 brew "graphviz", args: ["with-app"]
 brew "jq"
+brew "redis"
 brew "shellcheck"
 brew "terminal-notifier"
 brew "tree"
@@ -59,6 +60,17 @@ if [ -d "$sipity_dir" ]; then
   fi
 else
   fancy_echo "Please clone the sipity repo into ${sipity_dir}"
+fi
+
+fancy_echo 'Configuring Redis ...'
+redis_config_dir="$HOME/.redis"
+mkdir -p "$redis_config_dir"
+redis_config_file="${redis_config_dir}/redis.conf"
+if [ -f "$redis_config_file" ]; then
+  fancy_echo 'Local Redis config already present'
+else
+  fancy_echo 'No local Redis config found. Copying the default'
+  cp /usr/local/etc/redis.conf "$redis_config_file"
 fi
 
 fancy_echo 'Cleaning up old Homebrew formulae ...'
