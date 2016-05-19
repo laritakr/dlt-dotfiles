@@ -25,5 +25,9 @@ function rg {
   fi
 }
 
-export PATH="$HOME/.bin:$PATH"
+export GOPATH="$HOME/gocode"
+export PATH="$GOPATH/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
+
+# The following line is added automatically
+export PATH="$HOME/.bin:$PATH"

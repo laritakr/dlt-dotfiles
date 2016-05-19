@@ -5,6 +5,7 @@ brew bundle --file=- <<EOF
 brew "dos2unix"
 brew "exercism"
 brew "go"
+brew "godep"
 brew "graphviz", args: ["with-app"]
 brew "shellcheck"
 brew "terminal-notifier"
@@ -38,6 +39,10 @@ if [ -d "$curatend_dir" ]; then
 else
   fancy_echo "Please clone the CurateND repo into ${curatend_dir}"
 fi
+
+fancy_echo 'Go development environment setup ...'
+GOPATH="$HOME/gocode/"
+mkdir -p "$GOPATH"
 
 fancy_echo 'Configuring Java ...'
 brew cask install java
