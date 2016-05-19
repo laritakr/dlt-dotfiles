@@ -26,5 +26,8 @@ function rg {
 }
 
 export GOPATH="$HOME/gocode"
-export PATH="$HOME/.bin:$GOPATH/src/github.com/ndlib/bendo/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
+
+# The following line is added automatically
+export PATH="$HOME/.bin:$PATH"
