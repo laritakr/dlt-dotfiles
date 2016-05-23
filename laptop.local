@@ -14,6 +14,7 @@ brew "terminal-notifier"
 brew "tree"
 brew "wget"
 brew "wrk"
+brew "bash-completion"
 
 # Loading older version of MySQL gem for CurateND compatibility
 # gem mysql2 '0.3.13' supports MySQL ~> 5.6
