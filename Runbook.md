@@ -57,6 +57,8 @@ sh mac 2>&1 | tee ~/laptop.log
 ```console
 chsh -s $(which zsh)
 git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles
+brew tap thoughtbot/formulae
+brew install rcm
 env RCRC=$HOME/dotfiles/rcrc rcup
 ```
 
