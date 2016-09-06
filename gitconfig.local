@@ -33,6 +33,8 @@
   added = yellow
   changed = green
   untracked = magenta
+[core]
+  pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 [hub]
   protocol = https
 [push]

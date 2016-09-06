@@ -2,6 +2,7 @@
 
 fancy_echo 'Configuring utility packages ...'
 brew bundle --file=- <<EOF
+tap "homebrew/versions"
 brew "dos2unix"
 brew "exercism"
 brew "go"
@@ -14,6 +15,10 @@ brew "terminal-notifier"
 brew "tree"
 brew "wget"
 brew "wrk"
+brew "bash-completion"
+
+tap "ndlib/dlt"
+brew "go-jira"
 
 tap "ndlib/dlt"
 brew "go-jira"
@@ -32,6 +37,9 @@ mkdir -p "$GIT_DIR"
 
 fancy_echo 'Configuring ruby for CurateND ...'
 brew link --force v8-315
+
+fancy_echo 'Configuring MySQL for CurateND ...'
+brew link --force mysql56
 
 curatend_dir="${GIT_DIR}curate_nd/"
 if [ -d "$curatend_dir" ]; then
