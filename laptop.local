@@ -23,7 +23,6 @@ brew "go-jira"
 # Loading older version of MySQL gem for CurateND compatibility
 # gem mysql2 '0.3.13' supports MySQL ~> 5.6
 brew "homebrew/versions/mysql56"
-link "homebrew/versions/mysql56"
 
 # Loading older version of libv8 in order for therubyracer to compile in CurateND
 brew "homebrew/versions/v8-315"
@@ -35,6 +34,9 @@ mkdir -p "$GIT_DIR"
 
 fancy_echo 'Configuring ruby for CurateND ...'
 brew link --force v8-315
+
+fancy_echo 'Configuring MySQL for CurateND ...'
+brew link --force mysql56
 
 curatend_dir="${GIT_DIR}curate_nd/"
 if [ -d "$curatend_dir" ]; then
