@@ -10,6 +10,7 @@ brew "go"
 brew "godep"
 brew "graphviz", args: ["with-app"]
 brew "jq"
+brew "phantomjs"
 brew "redis"
 brew "shellcheck"
 brew "terminal-notifier"
