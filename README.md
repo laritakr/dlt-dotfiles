@@ -24,6 +24,18 @@ customisations you think could benefit others.
 Whenever you make changes to `laptop.local` use the `laptop` alias to re-run the
 `mac` script.
 
+## [Sufia](https://github.com/projecthydra/sufia) Development
+The project has several [prerequisites](https://github.com/projecthydra/sufia#prerequisites).
+Once the prerequisites are installed follow the [Sufia Development Guide](https://github.com/projecthydra/sufia/wiki/Sufia-Development-Guide)
+
+### Notes
+- Installing and running Solr is managed by [solr_wrapper](https://github.com/cbeer/solr_wrapper), no manual installation is necessary.
+- Installing and running Fedora is managed by [fcrepo_wrapper](https://github.com/cbeer/fcrepo_wrapper), no manual installation is necessary.
+- NOTE: Solr & Fedora run on different ports for development and test. `bundle exec rake ci` runs the wrapper commands on the correct ports for the tests to pass.
+- Install [LibreOffice](https://www.libreoffice.org/download/libreoffice-fresh/) manually, it has already been added to your path.
+- Installation of [FITS](http://projects.iq.harvard.edu/fits/downloads) has not been automated
+- Run Redis with `brew services start redis`
+
 ## MySQL
 By default the setup script does not configure MySQL securely. To add a root
 password use:

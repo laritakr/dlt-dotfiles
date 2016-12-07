@@ -3,23 +3,23 @@
 fancy_echo 'Configuring utility packages ...'
 brew bundle --file=- <<EOF
 tap "homebrew/versions"
+brew "bash-completion"
 brew "diff-so-fancy"
 brew "dos2unix"
 brew "exercism"
+brew "ghostscript"
 brew "go"
 brew "godep"
 brew "graphviz", args: ["with-app"]
+brew "imagemagick"
 brew "jq"
+brew "phantomjs"
 brew "redis"
 brew "shellcheck"
 brew "terminal-notifier"
 brew "tree"
 brew "wget"
 brew "wrk"
-brew "bash-completion"
-
-tap "ndlib/dlt"
-brew "go-jira"
 
 tap "ndlib/dlt"
 brew "go-jira"

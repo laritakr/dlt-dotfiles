@@ -57,5 +57,7 @@
   protocol = https
 [push]
   default = current
+[web]
+  browser = chrome
 [include]
   path = ~/.gitconfig.user
