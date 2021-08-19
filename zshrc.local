@@ -29,6 +29,10 @@ export GOPATH="$HOME/gocode"
 export PATH="$GOPATH/bin:$PATH"
 export PATH=/Applications/LibreOffice.app/Contents/MacOS/:$PATH
 eval "$(rbenv init - --no-rehash)"
+export SKIP_MYSQL_PASSWORD_FOR_LOCAL_DEVELOPMENT="true"
+export EDITOR='code'
+export GIT_EDITOR='code -w'
+cd $HOME/git
 
 # The following line is added automatically
 export PATH="$HOME/.bin:$PATH"
