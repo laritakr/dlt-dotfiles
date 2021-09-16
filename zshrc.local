@@ -32,6 +32,7 @@ eval "$(rbenv init - --no-rehash)"
 export SKIP_MYSQL_PASSWORD_FOR_LOCAL_DEVELOPMENT="true"
 export EDITOR='code'
 export GIT_EDITOR='code -w'
+export BUNDLER_EDITOR='code'
 cd $HOME/git
 
 # The following line is added automatically
